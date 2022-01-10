@@ -1,0 +1,44 @@
+body{
+    background-color: #000000;
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.block{
+    width: 350px;
+    height: 150px;
+    border: 2px solid lightseagreen;
+    outline: 2px solid lightseagreen;
+    outline-offset: 3px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.ghost{
+    width: 50px;
+    margin: 0 15px;
+    position: relative;
+    animation: moving 2s ease-in-out infinite;
+}
+.ghost:nth-child(2n){
+    animation-delay: -1s;
+}
+@keyframes moving{
+    0%{
+        top: 0px;
+    }
+    50%{
+        top: 100px;
+    }
+    100%{
+        top: 0;
+    }
+}
+.all-ghosts{
+    display: flex;
+    justify-content: center;
+}
